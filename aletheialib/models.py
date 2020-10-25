@@ -280,19 +280,19 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 from functools import partial
 from sklearn.metrics import accuracy_score
 
-from tensorflow.contrib import layers
-from tensorflow.contrib.framework import arg_scope
+from tf.contrib import layers
+from tf.contrib.framework import arg_scope
 
 
 
 # {{{ AdamaxOptimizer()
 # Implementation of Adamax optimizer, taken from : 
 # https://github.com/openai/iaf/blob/master/tf_utils/adamax.py
-from tensorflow.python.ops import control_flow_ops
-from tensorflow.python.ops import math_ops
-from tensorflow.python.ops import state_ops
-from tensorflow.python.framework import ops
-from tensorflow.python.training import optimizer
+from tf.python.ops import control_flow_ops
+from tf.python.ops import math_ops
+from tf.python.ops import state_ops
+from tf.python.framework import ops
+from tf.python.training import optimizer
 
 class AdamaxOptimizer(optimizer.Optimizer):
     """
