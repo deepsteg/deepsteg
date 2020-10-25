@@ -272,7 +272,7 @@ import random
 import threading
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
