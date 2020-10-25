@@ -272,27 +272,26 @@ import random
 import threading
 
 import numpy as np
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+import tensorflow as tf
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 from functools import partial
 from sklearn.metrics import accuracy_score
 
-from tf.contrib import layers
-from tf.contrib.framework import arg_scope
+from tensorflow.keras import layers
+from tensorflow.contrib.framework import arg_scope
 
 
 
 # {{{ AdamaxOptimizer()
 # Implementation of Adamax optimizer, taken from : 
 # https://github.com/openai/iaf/blob/master/tf_utils/adamax.py
-from tf.python.ops import control_flow_ops
-from tf.python.ops import math_ops
-from tf.python.ops import state_ops
-from tf.python.framework import ops
-from tf.python.training import optimizer
+from tensorflow.python.ops import control_flow_ops
+from tensorflow.python.ops import math_ops
+from tensorflow.python.ops import state_ops
+from tensorflow.python.framework import ops
+from tensorflow.python.training import optimizer
 
 class AdamaxOptimizer(optimizer.Optimizer):
     """
