@@ -273,6 +273,7 @@ import threading
 
 import numpy as np
 import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 tf.logging.set_verbosity(tf.logging.ERROR)
 
 
